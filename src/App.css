@@ -145,7 +145,7 @@ input:focus{
   list-style-type: none;
 } */
 
-*{
+/* *{
   box-sizing: border-box;
 }
 body{
@@ -166,12 +166,12 @@ body{
   
 }
 .miniContainer{
-  /* background-color: rgba(0, 0, 255, 0.514); */
   
   
-  background-color:#8a6959;
+  
+  background-color: #90AFC5;
   padding: 20px;
-  /* text-align: center; */
+ 
   height: 340px;
   border-radius:10px;
   color: white;
@@ -195,7 +195,7 @@ body{
 }
 select{
   width: 300px;
-  /* color: white; */
+ 
   position: absolute;
   margin-top: -15px;
   margin-left: -100px;
@@ -206,17 +206,9 @@ select{
   
 }
 
-/*
-https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png
-*/
-
-
-
-
-/* layout**/
 .container {
   width: 90%;
-  /* background-color: red; */
+  
   height: 100%;
   margin: auto;
 
@@ -227,7 +219,7 @@ https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-r
   align-items: center;
 }
 
-/**logo***/
+
 .logo-container {
   height: 50px;
   display: flex;
@@ -235,7 +227,6 @@ https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-r
   font-size: 1.1rem;
 
 
-  /* overflow: hidden; */
 }
 
 .logo {
@@ -279,8 +270,8 @@ a{
   margin-top: 25px;
   margin-left: 10px;
   text-decoration: none;
- /* color: white; */
- color:#46afc1;
+ 
+ color:#7f4937;
  font-style: italic;
  
 }
@@ -293,7 +284,7 @@ span{
   color: #000000 ;
   font-weight: bold;
   font-family:'Times New Roman', Times, serif;
-  /* margin-left: 10px; */
+  
  
 }
 .Category{
@@ -301,4 +292,70 @@ margin-top: 10px;
 color: white;
 
 font-size: 18px;
+} */
+
+
+
+/* * */
+
+/* Task3 */
+
+.container{
+  text-align: center;
+  justify-content: center;
+
+  margin-top: 10%;
+
+}
+table{
+  border:solid 2px black;
+  margin-top:110px;
+  margin-left:90px;
+  height: 300px;
+  width: 1100px;
+  margin-bottom: 20px;
+
+   
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+ 
+  
+}
+th {
+  background-color: #f2f2f2;
+  height: 30px;
+  width: 100px;
+  /* color: burlywood; */
+  font-family:'Times New Roman', Times, serif;
+  color: cadetblue;
+  font-weight: bold;
+  
+}
+
+ th, td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better readability */
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  height: 100px;
+ 
+}
+span{
+  width: 160px;
+  position: absolute;
+  margin-left: -3px;
+}
+td {
+  text-align: left; 
+  font-size: 14px; 
+  font-weight: normal; 
+  color: black;
+  margin-left: 100px;
+  font-weight: bolder;
 }

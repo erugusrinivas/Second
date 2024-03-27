@@ -97,84 +97,111 @@
 // export default App;
 
 
-import { useEffect, useState } from "react";
-import './App.css';
-function App() {
-  const [categories, setCategories] = useState([]);
-  const [entries, setEntries] = useState([]);
-  const [category, setCategory] = useState('');
+// import { useEffect, useState } from "react";
+// import './App.css';
+// function App() {
+//   const [categories, setCategories] = useState([]);
+//   const [entries, setEntries] = useState([]);
+//   const [category, setCategory] = useState('');
   
 
-  useEffect(() => {
-    fetch('https://api.publicapis.org/categories', {
-      method:"GET",
-    })
-      .then((resp) => {
-        resp.json().then((response) => {
-          setCategories(response.categories);
-        });
-      })
-      .catch((err) => alert(err.message ?? "Something went wrong"));
-  }, []);
+//   useEffect(() => {
+//     fetch('https://api.publicapis.org/categories', {
+//       method:"GET",
+//     })
+//       .then((resp) => {
+//         resp.json().then((response) => {
+//           setCategories(response.categories);
+//         });
+//       })
+//       .catch((err) => alert(err.message ?? "Something went wrong"));
+//   }, []);
 
-  useEffect(() => {
-    if(category){
-    fetch(`https://api.publicapis.org/entries?Category=${category}`, {
-      method:"GET",
-    })
-      .then((resp) => {
-        resp.json().then((response) => {
-          setEntries(response.entries);
-        });
-      })
-      .catch((err) => alert(err.message ?? "Something went wrong"));
-    }
-  },[category]);
+//   useEffect(() => {
+//     if(category){
+//     fetch(`https://api.publicapis.org/entries?Category=${category}`, {
+//       method:"GET",
+//     })
+//       .then((resp) => {
+//         resp.json().then((response) => {
+//           setEntries(response.entries);
+//         });
+//       })
+//       .catch((err) => alert(err.message ?? "Something went wrong"));
+//     }
+//   },[category]);
   
-  return (
-    <div className="header">
-      <div className="container container-header">
-        <div className="logo-container border-white">
-          <div className="logo"> </div>
-            <span className="dotin">.in</span>
-            </div>
-            <div className="address-container">
-              <p class="hello"></p>
-              <div className="icon-address">
-              <p></p>
-              </div>
-            </div>
-            <div className="search-container">
-            </div>
-      <div className="Drop">
-      <select value={category} onChange={(e)=> setCategory(e.target.value)} className="search-select">
-        {categories.map((category, index) => (
-          <option key={index} value={category}>{category}</option>
-        ))}
-      </select>
-      <div className="search-icon">
+//   return (
+    // <div className="header">
+    //   <div className="container container-header">
+    //     <div className="logo-container border-white">
+    //       <div className="logo"> </div>
+    //         <span className="dotin">.in</span>
+    //         </div>
+    //         <div className="address-container">
+    //           <p class="hello"></p>
+    //           <div className="icon-address">
+    //           <p></p>
+    //           </div>
+    //         </div>
+    //         <div className="search-container">
+    //         </div>
+    //   <div className="Drop">
+    //   <select value={category} onChange={(e)=> setCategory(e.target.value)} className="search-select">
+    //     {categories.map((category, index) => (
+    //       <option key={index} value={category}>{category}</option>
+    //     ))}
+    //   </select>
+    //   <div className="search-icon">
 
-      </div>
-      </div>
-      </div>
-      <div className="Search-bar">
-      <div className="mainContainer">
-        {entries.length > 0 && entries.map((item, index) => (
-          <div key={index} className="miniContainer" >
-           <div className="api"><span>API :</span> {item.API}</div>
-            <div className="des"><span>Description :</span>  {item.Description}</div>
-            <div className="Auth"><span>Auth :</span> {item.Auth}</div>
-            <div className="Http"><span>HTTPS :</span> {item.HTTPS}</div>
-            <div className="cors"><span>Cors :</span> {item.Cors}</div>
-          <div className="anchor"><span>Link:</span><a href={item.Link} target="_blank">{item.Link}</a></div>
-            <div className="Category"><span>Category :</span> {item.Category}</div>
-          </div>
-        ))}
-      </div>
-      </div>
-      </div>
+    //   </div>
+    //   </div>
+    //   </div>
+    //   <div className="Search-bar">
+    //   <div className="mainContainer">
+    //     {entries.length > 0 && entries.map((item, index) => (
+    //       <div key={index} className="miniContainer" >
+    //        <div className="api"><span>API :</span> {item.API}</div>
+    //         <div className="des"><span>Description :</span>  {item.Description}</div>
+    //         <div className="Auth"><span>Auth :</span> {item.Auth}</div>
+    //         <div className="Http"><span>HTTPS :</span> {item.HTTPS}</div>
+    //         <div className="cors"><span>Cors :</span> {item.Cors}</div>
+    //       <div className="anchor"><span>Link:</span><a href={item.Link} target="_blank">{item.Link}</a></div>
+    //         <div className="Category"><span>Category :</span> {item.Category}</div>
+    //       </div>
+    //     ))}
+    //   </div>
+    //   </div>
+    //   </div>
     
-  );
-}
+  
 
-export default App;
+  
+import './App.css'
+import moment from 'moment/moment';
+    function App(){
+      return(
+        <>
+        <div className='container'>
+          <table>
+          <thead>
+            <tr>
+              <th colspan={9}><span>Day-Date-month-year</span></th>
+              <th colSpan={2}>Date-month-year</th>
+              <th colSpan={2}>Hours-Minutes-AM/PM</th>
+              <th colSpan={2}>Hours-Minutes-Seconds/PM</th>
+              <th colSpan={2}>Day-Date/Month/Year/Hours/Minutes/Seconds/PM</th>
+            </tr>
+         
+   <td colSpan={9}> <div>{moment(new Date()).format(' ddd DD-mm-YYYY ')}</div></td> 
+   <td colSpan={3}><div>{moment(new Date()).format('D/M/YY')}</div></td>
+     <td colSpan={1}><div>{moment(new Date()).format('hh:mm a')}</div></td>
+   <td colSpan={1}><div>{moment(new Date()).format('kk:mm:ss a')}</div></td>
+     <td colSpan={3}><div>{moment(new Date()).format('ddd DD,MMMM,YYYY kk:mm:SS a')}</div></td>
+     </thead>
+     </table>
+     </div>
+        </>
+      )
+    }
+export default  App;
