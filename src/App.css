@@ -145,7 +145,14 @@ input:focus{
   list-style-type: none;
 } */
 
-*{
+
+
+/* Claasss component css */
+
+
+
+
+/* *{
   box-sizing: border-box;
 }
 body{
@@ -167,17 +174,16 @@ body{
   
   
 }
-.miniContainer{
+.miniContainer{ */
+
+
+
+/* padding: 20px;
   
-  
-  
-  /* background-color: #90AFC5; */
-  padding: 20px;
-  /* background-color: white; */
   background-color: #90AFC5;
   height: 340px;
   border-radius:10px;
-  /* color: ; */
+  
   width: 300px;
   line-height: 23px;
   border:  2px solid #E6E6E6 ;
@@ -230,16 +236,10 @@ select{
   font-size: 1.1rem;
 
 
-}
+} */
 
-.logo {
-  /* width: 100px;
-  height: 50px;
-  position: absolute; */
-  /* background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
-  background-repeat: no-repeat;
-  background-position-y: -40px;
-  overflow: hidden; */
+/* .logo {
+ 
 }
 h1{
   color: white;
@@ -276,8 +276,8 @@ a{
   margin-top: 25px;
   margin-left: 10px;
   /* text-decoration: none; */
- 
- color:blue;
+
+/* color:blue;
  font-style: italic;
  
 }
@@ -298,7 +298,7 @@ margin-top: 10px;
 color: white;
 
 font-size: 18px;
-}
+}  */
 
 
 
@@ -338,16 +338,16 @@ th {
   height: 30px;
   width: 70px;
   /* color: burlywood; */
-  /* font-family:'Times New Roman', Times, serif;
+/* font-family:'Times New Roman', Times, serif;
   color: black;
   font-weight: bold; */
-  
+
 /* }
 
  th, td {
   border: 1px solid #ddd;
   padding: 12px; /* Increased padding for better readability */
-  /* text-align: left; 
+/* text-align: left; 
 } */
 
 /* th {
@@ -385,3 +385,137 @@ h4{
   background-color: white;
   width: 230px; */
 /* }  */
+
+
+
+
+
+
+
+
+/* Form */
+
+
+/* body{
+  background-color: #ffffff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  line-height: 14px;
+  background-color: #23232300; */
+/* margin-top: 10px; */
+/* color: #ffffff; */
+/* }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form {
+  width: 400px;
+  margin-top: -10px;
+  margin-left: 450px;
+  line-height: 30px;
+  background-color: #006666;
+  border-color:black ;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 10px;
+  
+}
+input[type="password"] {
+  width: 90%;
+  padding: 12px 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  background-color: #2323230e;
+}
+input[type="email"] {
+  width: 90%;
+  padding: 12px 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  background-color: #2323230e;
+}
+input[type="text"] {
+  width: 90%;
+  padding: 12px 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 10px;
+ color: white;
+  background-color: #2323230e;
+ 
+}
+input[type="number"] {
+  width: 90%;
+  padding: 12px 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: white;
+  background-color: #2323230e;
+}
+
+label{
+  display: block;
+  margin-bottom: 8px;
+  margin-left: -300px; 
+  /* color: #fff;
+  margin-left: -290px;
+  font-weight: 20px; */
+/* margin-left: -290px;
+  color:whitesmoke;
+}
+
+.invalidTitle{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  color:red;
+  font-weight: bold;
+  
+  font-family: sans-serif;
+}
+
+input{
+  background-color: #fff;
+} */
+/* button{
+  border-color: rgba(10,11,13,.8);
+  background-color: rgba(10,11,13,.8);
+  color: #fff;
+  width: 50%;
+  padding: 12px 10px;
+  border-radius: 10px;
+ 
+}
+#email{
+  margin-left: -250px;
+}
+#mobileNumber{
+  margin-left: -250px;
+} */
+
+
+
+
+body {
+  background-color: blue;
+}
+
+#Loader{
+  background-color: none;
+  color: none;
+  overflow: hidden
+}
