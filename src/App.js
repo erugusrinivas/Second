@@ -1,35 +1,60 @@
-import './App.css';
-import './App.css';
-import LoginForm from './Components/LoginForm';
-import GratsButton from './Components/GratsButtton';
-import prectimage from './practimage.png';
+// import React, { useEffect } from "react";
+// import "./App.css";
+// import { useDispatch } from "react-redux";
+// import { saveUserDetails } from "./redux/slices/userSlice";
+// import UserDetails from "./UserDetails";
+
+// function App() {
+//   const dispatch = useDispatch();
+//   useEffect(() => {
+//     dispatch(saveUserDetails("E Srinivas"));
+//   }, [dispatch]);
+
+//   return (
+//     <div className="App">
+//       <UserDetails />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import './App.css';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import UserDetails from './UserDetails';
+import { saveUserDetails, showSnackbar,showLoader } from './redux/slices/userSlice';
+import CustomSnackbar from "./Snackbar/Snackbar";
+import Loader from "./Loader/Loader";
 function App() {
-  return (
-    <div className='Myapp'>
-    <div className="navbar">
-                <ul>
-                    <li><h1>FACEBOOK</h1></li>
-                </ul>
-                </div>
-                <div class="img">
-                <h2><b>facebook helps you connect and share with the people in your life</b></h2>
-                <img src={prectimage} alt="profile pic" />
-               
-            </div>
-    <div className='Appcontainer'>
-    <div className='mainContainers'>
-      <div> <LoginForm  titleClass="TextField" placeholder={"Email address or phone number"}/></div>
-      <div><LoginForm  titleClass="TextField1" placeholder={"Password"} /> </div>
-      <GratsButton title={"Log in"} handleOnClick={()=>console.log("Login")} titleClass="submitTitle" color="blue"/>
-      <div className="Forget"><a href='https://www.facebook.com'>Forgotten password?</a></div>
-      <div className='line'></div>
-      <GratsButton title={"Create new account"} handleOnClick={()=>console.log("Submit")} titleClass="Submit" color="green"/>
+    const dispatch = useDispatch();
+    useEffect(() => {
+        setTimeout(() => {
+            dispatch(saveUserDetails("E Srinivas"));
+        }, 1000)
+    }, [dispatch]);
 
-    </div>
-    </div>
-    
-    </div>
-  );
+    useEffect(() => {
+        dispatch(showSnackbar({ visible: true, message: 'Item Deleted' }))
+        setTimeout(() => {
+            dispatch(showSnackbar({ visible: false, message: '' }))
+        }, 3000)
+    }, [dispatch])
+
+    useEffect(()=>{
+        dispatch(showLoader({visible:true}))
+        setTimeout(()=>{
+            dispatch(showLoader({visible:false}))
+        },3000)
+    },[dispatch])
+
+    return (
+        <div>
+            <UserDetails />
+            <CustomSnackbar />
+            <Loader/>
+
+        </div>
+    )
 }
-
-export default App;
+export default App
