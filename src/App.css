@@ -509,13 +509,25 @@ input{
 
 
 
-
-body {
-  background-color: blue;
+body{
+  background-color:rgb(238, 238, 238);
 }
-
-#Loader{
-  background-color: none;
-  color: none;
-  overflow: hidden
+.container1{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-gap:24px;
+  padding:60px;
+}
+.container2{
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  height: 200px;
+  border-radius:5px;
+  font-weight:700;
+}
+.paginationContainer{
+  margin-top: 250px;
+  margin-left: 400px;
+  width: 400px;
 }

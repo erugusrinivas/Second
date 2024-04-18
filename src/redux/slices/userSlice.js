@@ -25,7 +25,7 @@ export const userSlice = createSlice({
     reducers: {
         saveUserDetails: (state, action) => {
             state.userDetails = action.payload;
-            alert(action.payload);
+            // alert(action.payload);
         },
 
         showSnackbar: (state, action) => {

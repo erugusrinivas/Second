@@ -19,13 +19,16 @@
 
 // export default App;
 
-// import './App.css';
+import './App.css';
+
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import UserDetails from './UserDetails';
-import { saveUserDetails, showSnackbar,showLoader } from './redux/slices/userSlice';
+import { saveUserDetails } from './redux/slices/userSlice';
 import CustomSnackbar from "./Snackbar/Snackbar";
 import Loader from "./Loader/Loader";
+import Pages from "./pages/Pages";
+
 function App() {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -34,25 +37,27 @@ function App() {
         }, 1000)
     }, [dispatch]);
 
-    useEffect(() => {
-        dispatch(showSnackbar({ visible: true, message: 'Item Deleted' }))
-        setTimeout(() => {
-            dispatch(showSnackbar({ visible: false, message: '' }))
-        }, 3000)
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(showSnackbar({ visible: true, message: 'HI Srinivas...!' }))
+    //     setTimeout(() => {
+    //         dispatch(showSnackbar({ visible: false, message: '' }))
+    //     }, 3000)
+    // }, [dispatch])
 
-    useEffect(()=>{
-        dispatch(showLoader({visible:true}))
-        setTimeout(()=>{
-            dispatch(showLoader({visible:false}))
-        },3000)
-    },[dispatch])
+    // useEffect(()=>{
+    //     dispatch(showLoader({visible:true}))
+    //     setTimeout(()=>{
+    //         dispatch(showLoader({visible:false}))
+    //     },3000)
+    // },[dispatch])
+    
 
     return (
         <div>
             <UserDetails />
             <CustomSnackbar />
             <Loader/>
+          <Pages/>
 
         </div>
     )
